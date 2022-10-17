@@ -91,6 +91,8 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.listen(3001, function () {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
   console.log("server is up and running");
 });

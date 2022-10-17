@@ -22,12 +22,9 @@ const projectSchema = new mongoose.Schema({
   },
 });
 
-mongoose.connect(
-  `mongodb+srv://ra7eem:${process.env.MONGO_PASSWORD}@portfolio.cdosdwm.mongodb.net/portfolio`,
-  {
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(`${process.env.MONGO_LINK}`, {
+  useNewUrlParser: true,
+});
 
 const Project = mongoose.model("Project", projectSchema);
 
